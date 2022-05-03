@@ -33,12 +33,16 @@ export const HomePage = ({ countries, setCountries }) => {
     }
   }, []);
 
+  useEffect(() => {
+    handleSearch();
+  }, [countries])
+
   return (
     <>
       <Controls onSearch={handleSearch}/>
       <List>
         {
-          countries.map(c => {
+          filtredCountries.map(c => {
             const countryInfo = {
               img: c.flags.png,
               name: c.name,
