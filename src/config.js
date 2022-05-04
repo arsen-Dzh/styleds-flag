@@ -10,4 +10,4 @@ let one = 1;
 let two = 2;
 
 const foo = 23;
-
+const logo = 'logo';
